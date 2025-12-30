@@ -5,6 +5,7 @@
 :root,html {
     margin:0px;
     padding:0px;
+    color-scheme: only light;
 }
 /*embedding*/
 iframe {
