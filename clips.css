@@ -2,6 +2,15 @@
  * @link https://www.mathsisfun.com/style4.css  
  */
 /* html, */
+:root,html {
+    margin:0px;
+    padding:0px;
+}
+/*embedding*/
+iframe {
+    width: 100%;
+    height: max-content;
+}
 
 my-clip[map="www.mathsisfun.com"] {
     --blue0: oklch(0.20 0.03 250);
