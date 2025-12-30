@@ -1,20 +1,21 @@
-/**
- * @link https://www.mathsisfun.com/style4.css  
- */
-/* html, */
-:root,html {
-    margin:0px;
-    padding:0px;
-    color-scheme: only light;
-}
-/*embedding*/
+/* embedding */
 iframe {
     width: 100%;
     min-height: 520px;
 }
-my-clip{
+
+:root, html {
+    margin: 0px;
+    padding: 0px;
+    color-scheme: only light;
+}
+
+my-clip {
     padding: 0px;
     /* margin: 0px; */
+    /**
+     * @link https://www.mathsisfun.com/style4.css  
+     */
 }
 
 my-clip[map="www.mathsisfun.com"] {
