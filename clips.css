@@ -1,9 +1,3 @@
-/* embedding */
-iframe {
-    width: 100%;
-    min-height: 520px;
-}
-
 :root,
 html {
     margin: 0px;
