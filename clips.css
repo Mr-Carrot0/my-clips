@@ -9,11 +9,14 @@
 /*embedding*/
 iframe {
     width: 100%;
-    height: 491px;
+    height: 500px;
 }
 
 my-clip[map="www.mathsisfun.com"] {
     color: white;
+    *{
+        color: white;
+    }
     --blue0: oklch(0.20 0.03 250);
     --blue1: oklch(0.25 0.05 250);
     --blue2: oklch(0.30 0.12 250);
