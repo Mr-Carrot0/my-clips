@@ -4,21 +4,24 @@ iframe {
     min-height: 520px;
 }
 
-:root, html {
+:root,
+html {
     margin: 0px;
     padding: 0px;
     color-scheme: only light;
+    background-color: black;
 }
 
 my-clip {
     padding: 0px;
     /* margin: 0px; */
-    /**
-     * @link https://www.mathsisfun.com/style4.css  
-     */
 }
 
 my-clip[map="www.mathsisfun.com"] {
+    /**
+     * @link https://www.mathsisfun.com/style4.css  
+     * @link https://www.mathsisfun.com/algebra/matrix-inverse.html
+     */
     color: white;
     --blue0: oklch(0.20 0.03 250);
     --blue1: oklch(0.25 0.05 250);
@@ -27,6 +30,16 @@ my-clip[map="www.mathsisfun.com"] {
     --blue-fg: oklch(0.90 0.08 250);
     --shade: oklch(0.6 0.04 240);
     --orange: oklch(0.75 0.15 80);
+    --red: oklch(0.65 0.25 25);
+    --sand0: oklch(0.36 0.04 285);
+    --sand1: oklch(0.40 0.05 285);
+    --sand2: oklch(0.47 0.05 285);
+    --sand: oklch(0.82 0.10 95);
+    --sand-fg: oklch(0.92 0.10 95);
+    --bg: oklch(0.1 0.03 250);
+    --gold: oklch(0.87 0.10 95);
+    background-color: var(--bg);
+
     .example {
         margin: 0.3rem 0.6rem 1.3rem 0.6rem;
         padding: 0.6rem;
@@ -36,10 +49,125 @@ my-clip[map="www.mathsisfun.com"] {
         box-shadow: 0.2rem 0.2rem 0.3rem var(--shade);
         overflow: hidden;
     }
-    .center, .centerfull {
-        margin-left: auto;
-        margin-right: auto;
+
+
+    /* .f {
+        display: inline grid;
+        grid-template-rows: 1fr 1fr;
         text-align: center;
+        vertical-align: 40%;
+        margin: 0 0.1rem;
+        border-collapse: collapse;
+        text-indent: 0;
+        line-height: 1;
+
+        u {
+            width: 100%;
+            border-bottom: 1px solid var(--gold);
+            text-decoration: none;
+            margin-bottom: 3px;
+        }
+    } */
+     	.f { 
+		display: inline-table; 
+		text-align: center; 
+		vertical-align: 40%; 
+		margin: 0 0.1rem; 
+		border-collapse: collapse;
+		text-indent:0; 
+		line-height: 1;
+	}
+	.f::before, .f::after { content: none; }
+	.f u, .f em {
+		display: table-row;
+		text-align: center;
+	}
+	.f u { text-decoration: none; }
+	.f em { font-style: normal; }
+	.f u { 
+		border-bottom: 0.1em solid currentColor; 
+		font-size: 90%; 
+		line-height: 140%;
+	}
+	.f em { 
+		font-size: 90%; 
+		line-height: 140%; 
+	}
+	.f em:before, .f em:after, .f strong:before, .f strong:after { content: "\2005";	}  /* 2005=unicode 1/4 em space  */
+
+    .mat {
+        font: 20px Verdana, Arial, Trebuchet MS, Tahoma, Geneva, Verdana, sans-serif;
+        color: #f30;
+
+        background-image: linear-gradient(#07c, #07c),
+            linear-gradient(#07c, #07c),
+            linear-gradient(#07c, #07c),
+            linear-gradient(#07c, #07c);
+
+        background-repeat: no-repeat;
+        background-size: 7px 2px;
+        background-position: top left, top right, bottom left, bottom right;
+
+        border: solid #07c;
+
+        border-width: 0 2px;
+        display: inline-block;
+        vertical-align: middle;
+
+        padding: 2px 9px 3px 9px;
+
+        border-radius: 3px;
+
+    }
+
+
+    .cols1,
+    .cols2,
+    .cols3,
+    .cols4 {
+        display: inline-grid;
+        grid-template-columns: max-content;
+        align-content: space-evenly;
+        grid-gap: 4px 14px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .cols1 {
+        grid-template-columns: max-content;
+    }
+
+    .cols2 {
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    .cols3 {
+        grid-template-columns: repeat(3, max-content);
+    }
+
+    .cols4 {
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .txt {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 3px 3px;
+        font: 1.5rem Verdana, Geneva, sans-serif;
+        color: orange;
+        text-align: center;
+        min-width: 25px;
+    }
+
+    .txt .intbl {
+        font-size: 90%;
+    }
+
+    .inv {
+        color: #07c;
+        display: inline-block;
+        transform: translateX(-0.1em) translateY(-1.1em);
+        font-size: 90%;
     }
 
     .tiny {
@@ -47,27 +175,32 @@ my-clip[map="www.mathsisfun.com"] {
         line-height: 1.5;
         color: var(--blue);
     }
+
     .small {
         font-size: 0.9rem;
         line-height: 1.5;
         color: var(--blue);
     }
+
     .large {
         font-size: 1.2rem;
         line-height: 1.5;
         color: var(--blue);
     }
+
     .larger {
         font-size: 1.3rem;
         line-height: 1.5;
         color: var(--orange);
         transition: var(--trans);
     }
+
     .largest {
         font-size: 1.6rem;
         line-height: 1.5;
         color: var(--gold);
     }
+
     .huge {
         font-size: 1.8rem;
         line-height: 1.5;
