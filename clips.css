@@ -6,6 +6,10 @@ html {
     background-color: black;
 }
 
+iframe {
+    width: 100%;
+}
+
 my-clip {
     padding: 0px;
     /* margin: 0px; */
