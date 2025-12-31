@@ -4,10 +4,19 @@ html {
     padding: 0px;
     color-scheme: only light;
     background-color: black;
+
+    &,
+    iframe {
+        background-color: transparent;
+    }
 }
 
 iframe {
     width: 100%;
+}
+
+*:has(>my-clip) {
+    background-color: transparent;
 }
 
 my-clip {
@@ -66,32 +75,54 @@ my-clip[map="www.mathsisfun.com"] {
             margin-bottom: 3px;
         }
     } */
-     	.f { 
-		display: inline-table; 
-		text-align: center; 
-		vertical-align: 40%; 
-		margin: 0 0.1rem; 
-		border-collapse: collapse;
-		text-indent:0; 
-		line-height: 1;
-	}
-	.f::before, .f::after { content: none; }
-	.f u, .f em {
-		display: table-row;
-		text-align: center;
-	}
-	.f u { text-decoration: none; }
-	.f em { font-style: normal; }
-	.f u { 
-		border-bottom: 0.1em solid currentColor; 
-		font-size: 90%; 
-		line-height: 140%;
-	}
-	.f em { 
-		font-size: 90%; 
-		line-height: 140%; 
-	}
-	.f em:before, .f em:after, .f strong:before, .f strong:after { content: "\2005";	}  /* 2005=unicode 1/4 em space  */
+    .f {
+        display: inline-table;
+        text-align: center;
+        vertical-align: 40%;
+        margin: 0 0.1rem;
+        border-collapse: collapse;
+        text-indent: 0;
+        line-height: 1;
+    }
+
+    .f::before,
+    .f::after {
+        content: none;
+    }
+
+    .f u,
+    .f em {
+        display: table-row;
+        text-align: center;
+    }
+
+    .f u {
+        text-decoration: none;
+    }
+
+    .f em {
+        font-style: normal;
+    }
+
+    .f u {
+        border-bottom: 0.1em solid currentColor;
+        font-size: 90%;
+        line-height: 140%;
+    }
+
+    .f em {
+        font-size: 90%;
+        line-height: 140%;
+    }
+
+    .f em:before,
+    .f em:after,
+    .f strong:before,
+    .f strong:after {
+        content: "\2005";
+    }
+
+    /* 2005=unicode 1/4 em space  */
 
     .mat {
         font: 20px Verdana, Arial, Trebuchet MS, Tahoma, Geneva, Verdana, sans-serif;
