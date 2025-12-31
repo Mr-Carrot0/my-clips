@@ -1,5 +1,4 @@
-:root,
-html {
+:root, body {
     margin: 0px;
     padding: 0px;
     color-scheme: only light;
@@ -12,7 +11,8 @@ html {
 }
 
 iframe {
-    width: 100%;
+    max-width: 100%;
+    min-width: 70%;
 }
 
 *:has(>my-clip) {
@@ -22,6 +22,9 @@ iframe {
 my-clip {
     padding: 0px;
     /* margin: 0px; */
+    &>*{
+        margin: 0px !important;
+    }
 }
 
 my-clip[map="www.mathsisfun.com"] {
