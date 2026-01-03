@@ -1,4 +1,5 @@
-:root, body {
+:root,
+body {
     margin: 0px;
     padding: 0px;
     color-scheme: only light;
@@ -21,13 +22,14 @@ iframe {
 
 my-clip {
     padding: 0px;
+
     /* margin: 0px; */
-    &>*{
+    &>* {
         margin: 0px !important;
     }
 }
 
-my-clip[map="www.mathsisfun.com"] {
+my-clip[ns="www.mathsisfun.com"] {
     /**
      * @link https://www.mathsisfun.com/style4.css  
      * @link https://www.mathsisfun.com/algebra/matrix-inverse.html
